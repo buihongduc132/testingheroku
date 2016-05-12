@@ -36,6 +36,9 @@ var jsFilesToInject = [
   'js/**/*.js'
 ];
 
+var addonsFilesToInject = [
+  '/*.html'
+];
 
 // Client-side HTML templates are injected using the sources below
 // The ordering of these templates shouldn't matter.
@@ -49,12 +52,6 @@ var jsFilesToInject = [
 var templateFilesToInject = [
   'templates/**/*.html'
 ];
-
-
-
-
-
-
 
 // Default path for public folder (see documentation for more information)
 var tmpPath = '.tmp/public/';
@@ -70,6 +67,9 @@ module.exports.jsFilesToInject = jsFilesToInject.map(function(jsPath) {
 });
 module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPath) {
   return require('path').join('assets/',tplPath);
+});
+module.exports.addonsFilesToInject = addonsFilesToInject.map(function(addonsPath) {
+  return require('path').join('/',addonsPath);
 });
 
 
