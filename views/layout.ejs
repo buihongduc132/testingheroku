@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <script>
+      dataLayer = [];
+    </script>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<head>
-  <title>
-    <%=typeof title == 'undefined' ? 'New Sails App' : title%>
-  </title>
 
-  <!-- Viewport mobile tag for sensible mobile support -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-  <!--
+    <!--
         Stylesheets and Preprocessors
         ==============================
 
@@ -31,24 +30,24 @@
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
 
-  <!--STYLES-->
-  <link rel="stylesheet" href="/styles/importer.css">
-  <!--STYLES END-->
-</head>
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+  </head>
 
-<body>
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXF8PD"
+  <body>
+    
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXF8PD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PXF8PD');
-  </script>
-  <!-- End Google Tag Manager -->
-  <%- body %>
+})(window,document,'script','dataLayer','GTM-PXF8PD');</script>
+<!-- End Google Tag Manager -->
+    
+    <%- body %>
 
 
 
@@ -74,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     -->
 
     <!--TEMPLATES-->
-
+    
     <!--TEMPLATES END-->
 
 
@@ -104,6 +103,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
     <!--SCRIPTS END-->
-</body>
-
+  </body>
 </html>
