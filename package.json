@@ -20,12 +20,15 @@
     "grunt-sync": "0.2.4",
     "include-all": "~0.1.6",
     "rc": "1.0.1",
-    "sails": "~0.12.3",
-    "sails-disk": "~0.10.9"
+    "sails": "~1.2.1",
+    "sails-disk": "~0.10.9",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "sails lift"
+    "start": "sails lift",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "main": "app.js",
   "repository": {
@@ -33,5 +36,6 @@
     "url": "git://github.com/anonymous node/sails user/heroku.git"
   },
   "author": "anonymous node/sails user",
-  "license": ""
+  "license": "",
+  "snyk": true
 }
